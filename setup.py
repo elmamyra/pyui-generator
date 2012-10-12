@@ -14,7 +14,8 @@ if platform.system() == "Linux":
     data_files = [
         ('share/icons/hicolor/32x32/apps', ['pyui-generator.png']),
         ('share/applications', ['pyui-generator.desktop']),
-        (os.path.join(os.environ['HOME'], ".local/share/mime/packages"), ['application-pyui-generator.xml'])
+        (os.path.join(os.environ['HOME'], ".local/share/mime/packages"), ['application-pyui-generator.xml']),
+        ('COPYING'), ('README-development')
     ]
 #    cmdclass={"install": my_install},
 else:
