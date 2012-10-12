@@ -1,0 +1,7 @@
+_____________RUNNING_____________
+
+for running pyui-generator launch pyuiGenerator_app/main.py:
+	# cd cd [CODE_DIR]/pyuiGenerator_app
+	# python main.py
+	
+	

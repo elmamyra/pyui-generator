@@ -1,0 +1,35 @@
+#!/usr/bin/python
+import platform
+import ConfigParser
+import sys, os
+from pyuiGenerator_app import main
+
+if len(sys.argv) > 1 and sys.argv[1] == "uninstall":
+    if platform.system() == "Linux":
+        pythonV = 'python{0}.{1}'.format(sys.version_info.major, sys.version_info.minor)
+        prefix = '/usr/local'
+        icon = os.path.join(prefix, 'share/icons/hicolor/32x32/apps/pyui-generator.png')
+        desktop = os.path.join(prefix, 'share/applications/pyui-generator.desktop')
+        bin_ = os.path.join(prefix, 'bin/pyui-generator')
+        eggInfo = os.path.join(prefix, 'lib', pythonV,'dist-packages/pyui_generator-1.0.egg-info')
+        mimeXml = os.path.join(os.environ['HOME'], '.local/share/mime/packages/application-pyui-generator.xml')
+        libDir = os.path.join(prefix, 'lib', pythonV, 'dist-packages/pyuiGenerator_app')
+        for file_ in (icon, desktop, bin_, eggInfo, mimeXml):
+            print 'remove ' + file_
+            os.system('rm ' + file_)
+       
+        os.system('rm -r ' + libDir)
+        
+        os.system('update-mime-database ~/.local/share/mime')
+            
+        mimeListPath = os.path.join(os.environ['HOME'], '.local/share/applications/mimeapps.list')
+        if os.path.exists(mimeListPath):
+            cfg = ConfigParser.ConfigParser()
+            cfg.read(mimeListPath)
+            if cfg.has_option('Added Associations', 'application/pyui-generator'):
+                cfg.remove_option('Added Associations', 'application/pyui-generator')
+            cfg.write(open(mimeListPath, 'w'))
+
+    print "uninstall"
+else:
+    main.run()

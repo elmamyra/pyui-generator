@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>addMulti.png</file>
+    <file>autoSave.png</file>
+    <file alias="execAll">execAll.png</file>
+    <file alias="move">move.png</file>
+    <file>new.png</file>
+    <file>add.png</file>
+    <file alias="edit">edit.png</file>
+    <file>exit.png</file>
+    <file>load.png</file>
+    <file>save.png</file>
+    <file alias="delete">delete.png</file>
+    <file>exec.png</file>
+  </qresource>
+</RCC>

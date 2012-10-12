@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=pyui-generator
+GenericName=pyui-generator
+Comment=Convert Qt Designer files to python files
+Comment[fr]=Convertis les fichiers Qt Designer en fichiers python
+Exec= pyui-generator %F
+X-KDE-StartupNotify=true
+Icon=pyui-generator
+MimeType= application/pyui-generator
+Type=Application
+Terminal=false
+InitialPreference=8
+Categories=Development;Utility;GUIDesigner;

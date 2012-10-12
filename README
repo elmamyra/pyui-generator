@@ -1,0 +1,16 @@
+INSTALL
+=======
+
+# cd [EXTRACT_DIR]/pyui-generator-1.0
+# sudo python setup.py install
+
+To run pyui-generator, then simply type
+
+# pyui-generator
+
+Or use the system menu
+
+UNINSTALL
+=========
+
+# sudo pyui-generator uninstall
