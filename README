@@ -1,3 +1,24 @@
+README for pyui generator
+=========================
+
+Main author: elmamyra
+
+pyui generator lets you easily and quickly convert files Qt Disigner files (.ui) 
+to python files for use with pyside or pyqt.
+python files can be generated manually or synchronized with Qt designer files.
+it uses commands pyside-uic, pyside-rcc (for pyside) and pyuic4, pyrcc4 (for pyqt)
+
+Feature:
+
+ - Create new project
+ - Load a project
+ - Save a project
+ - Add and remove files
+ - generate one or all files
+ - change the order of files
+ - synchronize files. The python files are automatically generated when ui files are modified
+
+
 INSTALL
 =======
 
